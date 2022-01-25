@@ -8339,15 +8339,15 @@
     "version": "0.8.0+commit.c7dfd78e.Emscripten.clang"
   },
   "networks": {
-    "1643142149626": {
+    "1643150422846": {
       "events": {},
       "links": {},
-      "address": "0x9a82fdB3D1beC2E61C79129beDcb68498365Fe2B",
-      "transactionHash": "0x9fd1ecd1c41121eca2706276e86eb6eea931bcfb3afbf816562b4b8fb6384b5b"
+      "address": "0x84E7d7Ba4Fc05F16EE24bBe34b92283Db035B322",
+      "transactionHash": "0x55051ed29056a69258f95e9dca039ff90ccab70354870f15e93a7f55ffa662d8"
     }
   },
   "schemaVersion": "3.4.4",
-  "updatedAt": "2022-01-25T20:26:21.139Z",
+  "updatedAt": "2022-01-25T22:42:07.058Z",
   "devdoc": {
     "kind": "dev",
     "methods": {
