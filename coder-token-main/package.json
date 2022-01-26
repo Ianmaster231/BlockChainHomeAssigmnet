@@ -10,13 +10,12 @@
     "dev": "lite-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Ian Zammit MSD63B>",
+  "author": "Enrico Zanardo <ezanardo@onezerobinary.com>",
   "license": "MIT",
   "devDependencies": {
     "lite-server": "^2.3.0"
   },
   "dependencies": {
-    "@openzeppelin/contracts": "^4.4.2",
-    "truffle": "^5.1.65"
+    "@openzeppelin/contracts": "^4.4.2"
   }
 }
