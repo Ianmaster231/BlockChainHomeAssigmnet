@@ -1,14 +1,14 @@
- require('dotenv').config()
+require('dotenv').config()
 
  const anemonic = process.env.MVEMONIC_PASSWORD;
  const RinkebyEndPoint = process.env.RinkebyEndPoint;
  const RinkbyWSEndpoint = process.env.RINKEBY_WS_END_POINT;
 
-const HDWalletProvider = require("@truffle/hdwallet-provider");
+//const HDWalletProvider = require("@truffle/hdwallet-provider");
 
  const path = require("path")
 module.exports = {
-  // See <http://truffleframework.com/docs/advanced/configuration>
+  // See http://truffleframework.com/docs/advanced/configuration
   // for more about customizing your Truffle configuration!
   networks: {
     development: {

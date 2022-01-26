@@ -21,7 +21,7 @@ App = {
   },
 
   initContract: function() {
-    $.getJSON('CoderToken.json', function(data) {
+    $.getJSON('CoderToken.json',function(data) {
       // Get the necessary contract artifact file and instantiate it with truffle-contract.
       var TutorialTokenArtifact = data;
       App.contracts.TutorialToken = TruffleContract(TutorialTokenArtifact);
@@ -29,15 +29,24 @@ App = {
       // Set the provider for our contract.
       App.contracts.TutorialToken.setProvider(App.web3Provider);
 
+      $.getJSON('XManFactory.json', function(data) {
+        // Get the necessary contract artifact file and instantiate it with truffle-contract.
+        var XManArtificat = data;
+        App.contracts.Shrek = TruffleContract(XManArtificat);
+  
+        // Set the provider for our contract.
+        App.contracts.Shrek.setProvider(App.web3Provider);
+      });
       // Use our contract to retieve and mark the adopted pets.
       return App.getBalances();
     });
 
     return App.bindEvents();
   },
-
+  
   bindEvents: function() {
     $(document).on('click', '#transferButton', App.handleTransfer);
+    $(document).on('click', '#Function2Button', App.shrekcoin);
   },
 
   handleTransfer: function(event) {
@@ -65,6 +74,37 @@ App = {
         alert('Transfer Successful!');
         return App.getBalances();
       }).catch(function(err) {
+        console.log(err.message);
+      });
+    });
+  },
+  
+  shrekcoin: function(event) {
+    event.preventDefault();
+
+    var amount = parseInt($('#amount').val());
+    var toAddress = $('#address').val();
+    
+    console.log('Transfer ' + amount + ' CDT to ' + toAddress);
+
+    var tutorialTokenInstance;
+
+    web3.eth.getAccounts(function(error, accounts) {
+      if (error) {
+        console.log(error);
+      }
+
+      var account = accounts[0];
+
+      App.contracts.Shrek.deployed().then(function(instance) {
+        tutorialTokenInstance = instance;
+
+        return tutorialTokenInstance.NewXMan(toAddress, amount, {from: account, gas: 100000});
+      }).then(function(result) {
+        alert('Transfer Successful!');
+        return App.getBalances();
+      }).catch(function(err) {
+        alert('Transfer failed not enough money!');
         console.log(err.message);
       });
     });
