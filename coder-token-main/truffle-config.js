@@ -1,10 +1,10 @@
 require('dotenv').config()
 
- const anemonic = process.env.MVEMONIC_PASSWORD;
+ const mnemonic = process.env.MVEMONIC_PASSWORD;
  const RinkebyEndPoint = process.env.RinkebyEndPoint;
  const RinkbyWSEndpoint = process.env.RINKEBY_WS_END_POINT;
 
-//const HDWalletProvider = require("@truffle/hdwallet-provider");
+const HDWalletProvider = require("@truffle/hdwallet-provider");
 
  const path = require("path")
 module.exports = {
@@ -19,7 +19,7 @@ module.exports = {
   },
   rinkeby:{
     provider:()=>{
-      return new HDWalletProvider(anemonic, RinkbyWSEndpoint);
+      return new HDWalletProvider(mnemonic, RinkbyWSEndpoint);
     },
     network_id: 4,
     gas:4500000,
