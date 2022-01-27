@@ -2,9 +2,9 @@
 
 pragma solidity ^0.8.0;
 
-import "./CoderToken.sol";
+import "./IZToken.sol";
 
-contract XManFactory is CoderToken {
+contract XManFactory is IZToken {
     
     uint256 dnaDigits = 16;
     uint dnaModulus = 10 ** dnaDigits;
