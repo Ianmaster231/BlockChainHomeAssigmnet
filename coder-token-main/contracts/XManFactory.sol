@@ -59,6 +59,10 @@ contract XManFactory is IZToken {
        return ownerXmen.length;
     }
 
+function getNumberOfIZT() external view returns(uint){
+        XMan[] storage ownerXmen = xMenToOwner[msg.sender];
+       return ownerXmen.length;
+    }
     function returnXman(uint index) external view returns (string memory, uint){
         XMan[] storage ownerXmen = xMenToOwner[msg.sender];
 

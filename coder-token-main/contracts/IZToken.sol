@@ -7,7 +7,7 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 contract IZToken is ERC20 {
 
-    uint256 public INITIAL_SUPPLY = 42000000;
+    uint256 public INITIAL_SUPPLY = 1000000;
 
     constructor() ERC20("IZToken", "IZT") {
         decimals();
