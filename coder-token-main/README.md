@@ -10,7 +10,7 @@
 (9) 0xbb8ADc463F681aAe788E1012Da4C6D557bAdD63F (100 ETH)
 
 Private Keys
-==================
+------------------------------------------------------
 (0) 0x629eb5beda90a6f1a2222ab9244971672181444129f63d69fa929ba0dde3b20a
 (1) 0x47758c76a45ac3a639ab6f7b5c5421ebdfec8a3d868a9bf28d6a02e6865098af
 (2) 0x8be41d4119dd18205e3566aafbced32c4ad83b5d5ddbc6f8ae37092224cbbd00
@@ -21,3 +21,20 @@ Private Keys
 (7) 0x892a8d21d051b940d93e4661dff57bd7218455d61aebdf9cff2c8d41dcad74f0
 (8) 0xa8d1d3bfa54dda26632bd5050aa467ea1327740b4e2cc10b201248e3cfa064a0
 (9) 0x3376e6da686699fc36069a78a129087daeb8529c9592791060eb4d7b114e8b43
+
+
+Steps For running local host
+------------------------------------------------------
+npm install
+truffle compile
+cmd terminal to run ganache-cli for local host
+truffle deploy
+npm run dev
+------------------------------------------------------
+
+remove all build/contract so you can see progress of rinkeby testing
+------------------------------------------------------
+truffle compile
+truffle deploy --network rinkeby
+Then the data loads and your main account with eth testing will be reduced for gas fees
+

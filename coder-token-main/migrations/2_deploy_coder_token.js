@@ -1,5 +1,5 @@
-var coderToken = artifacts.require("./CoderToken.sol");
+var IZToken = artifacts.require("./IZToken.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(coderToken);
+  deployer.deploy(IZToken);
 };
