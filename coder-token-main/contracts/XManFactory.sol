@@ -76,7 +76,7 @@ contract XManFactory is IZToken {
     function createRandomXMan(string memory _name, uint amount) public payable{
         //require(ownerXManCount[msg.sender] == 0);
          require(amount >= XMAN_COST, "You need to have at least 100 CDT");
-         transfer((owner), amount);
+         transfer(owner, amount);
         uint randDna = _generateRandomDna(_name);
         _createXMan(_name, randDna);
     }

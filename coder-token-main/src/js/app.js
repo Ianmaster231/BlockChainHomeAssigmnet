@@ -21,7 +21,7 @@ App = {
   },
 
   initContract: function() {
-    $.getJSON('CoderToken.json',function(data) {
+    $.getJSON('IZToken.json',function(data) {
       // Get the necessary contract artifact file and instantiate it with truffle-contract.
       var TutorialTokenArtifact = data;
       App.contracts.TutorialToken = TruffleContract(TutorialTokenArtifact);
