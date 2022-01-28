@@ -55,7 +55,7 @@ App = {
     var amount = parseInt($('#CDTransferAmount').val());
     var toAddress = $('#CDTransferAddress').val();
 
-    console.log('Transfer ' + amount + ' CDT to ' + toAddress);
+    console.log('Transfer ' + amount + ' IZT to ' + toAddress);
 
     var tutorialTokenInstance;
 
